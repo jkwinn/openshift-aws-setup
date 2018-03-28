@@ -7,9 +7,17 @@ region: "us-west-2"
 
 # The public DNS for cluster, you must have a Route 53 zone configured for this
 public_dns_zone: "honeyshift.com"
-# Prefix for subdomain for wildcard DNS, i.e. *.apps.ocplab.com
+
+# Prefix for subdomain for wildcard DNS, i.e. *.apps.honeyshift.com
 public_subdomain_prefix: "apps"
-openshift_master_cluster_public_hostname: "paas.{{public_subdomain_prefix}}.{{public_dns_zone}}"
+
+# Prefix for subdomain for masters public URL, i.e. paas.honeyshift.com
+#openshift_master_cluster_public_hostname: "paas"
+
+# Some corporate networks block 8443, would you like to alter?
+change_default_ports: true
+openshift_master_api_port: 443
+openshift_master_console_port: 443
 
 # Amazon key pair to use, must exist before running script. Please generate in AWS management console.
 aws_key_pair: "honeyshiftwest"
