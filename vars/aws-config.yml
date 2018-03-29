@@ -14,9 +14,12 @@ public_subdomain_prefix: "apps"
 # Prefix for subdomain for masters public URL, i.e. paas.honeyshift.com
 #openshift_master_cluster_public_hostname: "paas"
 
-# Some corporate networks block 8443, would you like to alter?
-change_default_ports: true
+# Some corporate networks block 8443, would you like to alter the web UI port?
+change_default_web_port: true
 openshift_master_api_port: 443
+
+# Would you also like to change the API port?
+change_default_api_port: false
 openshift_master_console_port: 443
 
 # Amazon key pair to use, must exist before running script. Please generate in AWS management console.
