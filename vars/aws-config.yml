@@ -20,7 +20,7 @@ openshift_master_console_port: 443
 
 # Would you also like to change the API port?
 change_default_api_port: false
-openshift_master_api_port: 443
+openshift_master_api_port: 8443
 
 # Amazon key pair to use, must exist before running script. Please generate in AWS management console.
 aws_key_pair: "honeyshiftwest"
