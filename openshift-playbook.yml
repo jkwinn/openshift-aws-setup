@@ -200,4 +200,4 @@
       msg: 
         - 'The script has completed successfully.'
         - 'Master public IP: {{master_public_ip}}'
-        - 'OpenShift console: https://{{public_dns_zone}}:8443'
+        - 'OpenShift console: https://{{public_dns_zone}}:{{openshift_master_api_port}}'
