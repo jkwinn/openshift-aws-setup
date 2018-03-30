@@ -56,7 +56,7 @@
   become: true
 
 - name: Enable required repos
-  shell: 'subscription-manager repos --enable="rhel-7-server-rpms" --enable="rhel-7-server-extras-rpms" --enable="rhel-7-server-ose-{{ocp_version}}-rpms" --enable="rhel-7-fast-datapath-rpms --enable="rhel-7-server-jb-eap-7.0-containers" --enable="cf-me-5.9-for-rhel-7-containers" --enable="rhel-7-server-rhamp-1.0-containers" --enable="rhel-7-server-3scale-amp-2.1-containers" --enable="rhel-7-server-jboss-mm-7.0-techpreview-containers"'
+  shell: 'subscription-manager repos --enable="rhel-7-server-rpms" --enable="rhel-7-server-extras-rpms" --enable="rhel-7-server-ose-{{ocp_version}}-rpms" --enable="rhel-7-fast-datapath-rpms" --enable="rhel-7-server-jb-eap-7.0-containers" --enable="cf-me-5.9-for-rhel-7-containers" --enable="rhel-7-server-rhamp-1.0-containers" --enable="rhel-7-server-3scale-amp-2.1-containers" --enable="rhel-7-server-jboss-mm-7.0-techpreview-containers"'
   register: result
   until: result | succeeded
   retries: 10
